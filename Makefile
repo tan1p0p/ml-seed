@@ -1,7 +1,9 @@
+tag = your-repo-name
+
 build:
-	docker build . -t ambiguous-segmentation
+	docker build . -t $(tag)
 run:
-	docker run -v `pwd`:/workspace -it ambiguous-segmentation
+	docker run -v `pwd`:/workspace -it $(tag)
 train:
 	python scripts/main.py
 debug:
